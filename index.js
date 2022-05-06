@@ -120,14 +120,18 @@ init()
 const keyboard = document.querySelector('.keyboard')
 const arrKeys = keyboard.querySelectorAll('div[data-keyCode]')
 
+let lang = 'en'
+
 // const arrKeyCode = [192, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 189, 187, 8, 9, 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 219, 221, 220, 46, 20, 65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 222, 13, 16, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, 16, 38, 17, 91, 18, 32, 18, 17, 37, 40, 39]
 
 document.onkeydown = function(event) {
     // console.log('event', event);
+
+    catchModifiersEvent(event)
     // console.log('event.code:', event.code);
     // console.log('event.key:', event.key);
-    console.log('event.keyCode:', event.keyCode);
-    console.log('event.location:', event.location);
+    // console.log('event.keyCode:', event.keyCode);
+    // console.log('event.location:', event.location);
     let obj = {'keyCode': event.keyCode, 'location': event.location}
     toggleActiveBtn(obj, arrKeys)
 }
@@ -153,4 +157,25 @@ function toggleActiveBtn(obj, arr) {
     }, 300)
 }
 
-console.log('keyCodeObj', keyCodeObj);
+function catchModifiersEvent(event) {
+//    console.log('event', event);
+
+   if (event.getModifierState("Alt") && event.getModifierState("Shift")) {
+    if (lang === 'en') {
+        getTranslate('ru')
+    } else if (lang === 'ru') {
+        getTranslate('en')
+    }
+   }
+}
+
+function getTranslate(lng) {
+    lang = lng
+
+    arrKeys.forEach((el) => {
+        if (Object.keys(keyCodeObj[lng]).includes(el.dataset.keycode)) {
+            el.textContent = ''
+            el.textContent = keyCodeObj[lng][el.dataset.keycode]
+        }
+    })
+}
