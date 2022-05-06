@@ -1,3 +1,5 @@
+import keyCodeObj from './translate.js'
+
 const body = document.querySelector('body')
 
 function init() {
@@ -150,3 +152,5 @@ function toggleActiveBtn(obj, arr) {
         result.classList.remove('active')
     }, 300)
 }
+
+console.log('keyCodeObj', keyCodeObj);
