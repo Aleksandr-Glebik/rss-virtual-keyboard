@@ -10,98 +10,98 @@ function init() {
         </form>
         <div class="keyboard">
             <div class="row">
-                <div class="keys" data-keyCode="192">\`</div>
-                <div class="keys" data-keyCode="49">1</div>
-                <div class="keys" data-keyCode="50">2</div>
-                <div class="keys" data-keyCode="51">3</div>
-                <div class="keys" data-keyCode="52">4</div>
-                <div class="keys" data-keyCode="53">5</div>
-                <div class="keys" data-keyCode="54">6</div>
-                <div class="keys" data-keyCode="55">7</div>
-                <div class="keys" data-keyCode="56">8</div>
-                <div class="keys" data-keyCode="57">9</div>
-                <div class="keys" data-keyCode="48">0</div>
-                <div class="keys" data-keyCode="189">-</div>
-                <div class="keys" data-keyCode="187">=</div>
-                <div class="keys btn" data-keyCode="8">Backspace</div>
+                <div class="keys" data-keyCode="192" data-location="0">\`</div>
+                <div class="keys" data-keyCode="49" data-location="0">1</div>
+                <div class="keys" data-keyCode="50" data-location="0">2</div>
+                <div class="keys" data-keyCode="51" data-location="0">3</div>
+                <div class="keys" data-keyCode="52" data-location="0">4</div>
+                <div class="keys" data-keyCode="53" data-location="0">5</div>
+                <div class="keys" data-keyCode="54" data-location="0">6</div>
+                <div class="keys" data-keyCode="55" data-location="0">7</div>
+                <div class="keys" data-keyCode="56" data-location="0">8</div>
+                <div class="keys" data-keyCode="57" data-location="0">9</div>
+                <div class="keys" data-keyCode="48" data-location="0">0</div>
+                <div class="keys" data-keyCode="189" data-location="0">-</div>
+                <div class="keys" data-keyCode="187" data-location="0">=</div>
+                <div class="keys btn" data-keyCode="8" data-location="0">Backspace</div>
             </div>
             <div class="row">
-                <div class="keys btn" data-keyCode="9">Tab</div>
-                <div class="keys" data-keyCode="81">q</div>
-                <div class="keys" data-keyCode="87">w</div>
-                <div class="keys" data-keyCode="69">e</div>
-                <div class="keys" data-keyCode="82">r</div>
-                <div class="keys" data-keyCode="84">t</div>
-                <div class="keys" data-keyCode="89">y</div>
-                <div class="keys" data-keyCode="85">u</div>
-                <div class="keys" data-keyCode="73">i</div>
-                <div class="keys" data-keyCode="79">o</div>
-                <div class="keys" data-keyCode="80">p</div>
-                <div class="keys" data-keyCode="219">[</div>
-                <div class="keys" data-keyCode="221">]</div>
-                <div class="keys" data-keyCode="220">\\</div>
-                <div class="keys btn" data-keyCode="46">Delete</div>
+                <div class="keys btn" data-keyCode="9" data-location="0">Tab</div>
+                <div class="keys" data-keyCode="81" data-location="0">q</div>
+                <div class="keys" data-keyCode="87" data-location="0">w</div>
+                <div class="keys" data-keyCode="69" data-location="0">e</div>
+                <div class="keys" data-keyCode="82" data-location="0">r</div>
+                <div class="keys" data-keyCode="84" data-location="0">t</div>
+                <div class="keys" data-keyCode="89" data-location="0">y</div>
+                <div class="keys" data-keyCode="85" data-location="0">u</div>
+                <div class="keys" data-keyCode="73" data-location="0">i</div>
+                <div class="keys" data-keyCode="79" data-location="0">o</div>
+                <div class="keys" data-keyCode="80" data-location="0">p</div>
+                <div class="keys" data-keyCode="219" data-location="0">[</div>
+                <div class="keys" data-keyCode="221" data-location="0">]</div>
+                <div class="keys" data-keyCode="220" data-location="0">\\</div>
+                <div class="keys btn" data-keyCode="46" data-location="0">Delete</div>
             </div>
             <div class="row">
-                <div class="keys btn" data-keyCode="20">Caps Lock</div>
-                <div class="keys" data-keyCode="65">a</div>
-                <div class="keys" data-keyCode="83">s</div>
-                <div class="keys" data-keyCode="68">d</div>
-                <div class="keys" data-keyCode="70">f</div>
-                <div class="keys" data-keyCode="71">g</div>
-                <div class="keys" data-keyCode="72">h</div>
-                <div class="keys" data-keyCode="74">j</div>
-                <div class="keys" data-keyCode="75">k</div>
-                <div class="keys" data-keyCode="76">l</div>
-                <div class="keys" data-keyCode="186">;</div>
-                <div class="keys" data-keyCode="222">'</div>
-                <div class="keys btn" data-keyCode="13">Enter</div>
+                <div class="keys btn" data-keyCode="20" data-location="0">Caps Lock</div>
+                <div class="keys" data-keyCode="65" data-location="0">a</div>
+                <div class="keys" data-keyCode="83" data-location="0">s</div>
+                <div class="keys" data-keyCode="68" data-location="0">d</div>
+                <div class="keys" data-keyCode="70" data-location="0">f</div>
+                <div class="keys" data-keyCode="71" data-location="0">g</div>
+                <div class="keys" data-keyCode="72" data-location="0">h</div>
+                <div class="keys" data-keyCode="74" data-location="0">j</div>
+                <div class="keys" data-keyCode="75" data-location="0">k</div>
+                <div class="keys" data-keyCode="76" data-location="0">l</div>
+                <div class="keys" data-keyCode="186" data-location="0">;</div>
+                <div class="keys" data-keyCode="222" data-location="0">'</div>
+                <div class="keys btn" data-keyCode="13" data-location="0">Enter</div>
             </div>
             <div class="row">
-                <div class="keys btn" data-keyCode="16">Shift</div>
-                <div class="keys" data-keyCode="90">z</div>
-                <div class="keys" data-keyCode="88">x</div>
-                <div class="keys" data-keyCode="67">c</div>
-                <div class="keys" data-keyCode="86">v</div>
-                <div class="keys" data-keyCode="66">b</div>
-                <div class="keys" data-keyCode="78">n</div>
-                <div class="keys" data-keyCode="77">m</div>
-                <div class="keys" data-keyCode="188">,</div>
-                <div class="keys" data-keyCode="190">.</div>
-                <div class="keys" data-keyCode="191">/</div>
-                <div class="keys btn" data-keyCode="38">
+                <div class="keys btn" data-keyCode="16" data-location="1">Shift</div>
+                <div class="keys" data-keyCode="90" data-location="0">z</div>
+                <div class="keys" data-keyCode="88" data-location="0">x</div>
+                <div class="keys" data-keyCode="67" data-location="0">c</div>
+                <div class="keys" data-keyCode="86" data-location="0">v</div>
+                <div class="keys" data-keyCode="66" data-location="0">b</div>
+                <div class="keys" data-keyCode="78" data-location="0">n</div>
+                <div class="keys" data-keyCode="77" data-location="0">m</div>
+                <div class="keys" data-keyCode="188" data-location="0">,</div>
+                <div class="keys" data-keyCode="190" data-location="0">.</div>
+                <div class="keys" data-keyCode="191" data-location="0">/</div>
+                <div class="keys btn" data-keyCode="38" data-location="0">
                     <svg class="svg">
                         <use xlink:href="./icon/sprite.svg#arrow-up"></use>
                       </svg>
                 </div>
-                <div class="keys btn" data-keyCode="16">Shift</div>
+                <div class="keys btn" data-keyCode="16" data-location="2">Shift</div>
             </div>
             <div class="row">
-                <div class="keys btn" data-keyCode="16">Ctrl</div>
-                <div class="keys btn" data-keyCode="#">Fn</div>
-                <div class="keys btn" data-keyCode="91">
+                <div class="keys btn" data-keyCode="17" data-location="1">Ctrl</div>
+                <div class="keys btn" data-keyCode="91" data-location="0">
                     <svg class="svg">
                         <use xlink:href="./icon/sprite.svg#windows"></use>
                       </svg>
                 </div>
-                <div class="keys btn" data-keyCode="18">Alt</div>
-                <div class="keys space" data-keyCode="32">Space</div>
-                <div class="keys btn" data-keyCode="37">
+                <div class="keys btn" data-keyCode="18" data-location="1">Alt</div>
+                <div class="keys space" data-keyCode="32" data-location="0">Space</div>
+                <div class="keys btn" data-keyCode="18"  data-location="2">Alt</div>
+                <div class="keys btn" data-keyCode="37" data-location="0">
                     <svg class="svg">
                         <use xlink:href="./icon/sprite.svg#arrow-left"></use>
                       </svg>
                 </div>
-                <div class="keys btn" data-keyCode="40">
+                <div class="keys btn" data-keyCode="40" data-location="0">
                     <svg class="svg">
                         <use xlink:href="./icon/sprite.svg#arrow-down"></use>
                       </svg>
                 </div>
-                <div class="keys btn" data-keyCode="39">
+                <div class="keys btn" data-keyCode="39" data-location="0">
                     <svg class="svg">
                         <use xlink:href="./icon/sprite.svg#arrow-right"></use>
                       </svg>
                 </div>
-                <div class="keys btn" data-keyCode="17">Ctrl</div>
+                <div class="keys btn" data-keyCode="17" data-location="2">Ctrl</div>
             </div>
         </div>
         <div class="message">
@@ -124,14 +124,24 @@ document.onkeydown = function(event) {
     // console.log('event', event);
     // console.log('event.code:', event.code);
     // console.log('event.key:', event.key);
-    // console.log('event.keyCode:', event.keyCode);
-
-    toggleActiveBtn(event.keyCode, arrKeys)
+    console.log('event.keyCode:', event.keyCode);
+    console.log('event.location:', event.location);
+    let obj = {'keyCode': event.keyCode, 'location': event.location}
+    toggleActiveBtn(obj, arrKeys)
 }
 
-function toggleActiveBtn(el, arr) {
+function toggleActiveBtn(obj, arr) {
     let result = Array.from(arr).find((item) => {
-        return item.dataset.keycode == el
+        if (item.dataset.keycode == obj.keyCode && obj.keyCode == 16) {
+            return item.dataset.location == obj.location
+        }
+        if (item.dataset.keycode == obj.keyCode && obj.keyCode == 17) {
+            return item.dataset.location == obj.location
+        }
+        if (item.dataset.keycode == obj.keyCode && obj.keyCode == 18) {
+            return item.dataset.location == obj.location
+        }
+        return item.dataset.keycode == obj.keyCode
     })
 
     result.classList.add('active')
