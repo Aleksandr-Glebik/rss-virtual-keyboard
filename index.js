@@ -123,11 +123,9 @@ const arrKeys = keyboard.querySelectorAll('div[data-keyCode]')
 
 let lang = 'en'
 
-// const arrKeyCode = [192, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 189, 187, 8, 9, 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 219, 221, 220, 46, 20, 65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 222, 13, 16, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, 16, 38, 17, 91, 18, 32, 18, 17, 37, 40, 39]
-
 document.onkeydown = function(event) {
     let obj = {'keyCode': event.keyCode, 'location': event.location}
-    
+
     toggleActiveBtn(obj, arrKeys)
     catchModifiersEvent(event)
 }
@@ -146,11 +144,7 @@ function toggleActiveBtn(obj, arr) {
         return item.dataset.keycode == obj.keyCode
     })
 
-    result.classList.add('active')
-
-    setTimeout(() => {
-        result.classList.remove('active')
-    }, 300)
+    addAnimationBtn(result)
 }
 
 function catchModifiersEvent(event) {
@@ -222,6 +216,7 @@ function getValueBtn(event) {
 
     if (event.target.classList.contains('keys')) {
         let btnClick = event.target.dataset.keycode
+        addAnimationBtn(event.target)
 
         if (btnClick == '9' || btnClick == '20' || btnClick == '16'
         || btnClick == '17' || btnClick == '18' || btnClick == '46'
@@ -258,3 +253,10 @@ function showInformationInTextArea(btnClickValue, inputValue) {
     textArea.value += resultShowInput
 }
 
+function addAnimationBtn(btn) {
+    btn.classList.add('jello-horizontal')
+
+    setTimeout(() => {
+        btn.classList.remove('jello-horizontal')
+    }, 600)
+}
