@@ -8,7 +8,8 @@ function init() {
         <h1 class="h1">RSS Virtual Keyboard</h1>
         <form action="" method="post" class="form">
             <label for="textarea"></label>
-            <textarea name="textarea" id="textarea" class="textarea"></textarea>
+            <textarea name="textArea" id="textarea" class="textarea"
+            placeholder="Text input field" autofocus></textarea>
         </form>
         <div class="keyboard">
             <div class="row">
@@ -125,15 +126,10 @@ let lang = 'en'
 // const arrKeyCode = [192, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 189, 187, 8, 9, 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 219, 221, 220, 46, 20, 65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 222, 13, 16, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, 16, 38, 17, 91, 18, 32, 18, 17, 37, 40, 39]
 
 document.onkeydown = function(event) {
-    // console.log('event', event);
-
-    catchModifiersEvent(event)
-    // console.log('event.code:', event.code);
-    // console.log('event.key:', event.key);
-    // console.log('event.keyCode:', event.keyCode);
-    // console.log('event.location:', event.location);
     let obj = {'keyCode': event.keyCode, 'location': event.location}
+    
     toggleActiveBtn(obj, arrKeys)
+    catchModifiersEvent(event)
 }
 
 function toggleActiveBtn(obj, arr) {
@@ -158,8 +154,6 @@ function toggleActiveBtn(obj, arr) {
 }
 
 function catchModifiersEvent(event) {
-//    console.log('event', event);
-
    if (event.getModifierState("Alt") && event.getModifierState("Shift")) {
     if (lang === 'en') {
         getTranslate('ru')
@@ -205,3 +199,62 @@ function getTranslateWithLC(lang) {
 }
 
 window.addEventListener('load', getLocalStorage)
+
+const form = document.forms[0]
+const textArea = form.elements.textArea
+
+textArea.addEventListener('input', getValueFromTextArea)
+textArea.addEventListener('input', getValueBtn)
+
+function getValueFromTextArea() {
+    let inputValue = textArea.value
+    return inputValue
+}
+
+keyboard.addEventListener('click', getValueBtn)
+keyboard.addEventListener('click', getValueFromTextArea)
+
+function getValueBtn(event) {
+    textArea.focus()
+
+    let inputValue = getValueFromTextArea()
+    let result
+
+    if (event.target.classList.contains('keys')) {
+        let btnClick = event.target.dataset.keycode
+
+        if (btnClick == '9' || btnClick == '20' || btnClick == '16'
+        || btnClick == '17' || btnClick == '18' || btnClick == '46'
+        || btnClick == '8' || btnClick == '13' || btnClick == '32'
+        || btnClick == '37' || btnClick == '38' || btnClick == '39'
+        || btnClick == '40') {
+            return result = ''
+        } else {
+            let btnAddEventPress = Array.from(arrKeys).find((item) => {
+                if (item.dataset.keycode == btnClick) {
+                   // console.log('item.textContent', item.textContent);
+                   return item.textContent
+               }
+           })
+           result = btnAddEventPress.textContent
+        }
+    }
+    showInformationInTextArea(result, inputValue)
+}
+
+function showInformationInTextArea(btnClickValue, inputValue) {
+    let resultShowInput = ''
+
+    if (inputValue && btnClickValue) {
+        resultShowInput += btnClickValue
+    } else if (inputValue && !btnClickValue) {
+        resultShowInput += resultShowInput
+    } else if (!inputValue && btnClickValue) {
+        resultShowInput = btnClickValue
+    } else if (!inputValue && !btnClickValue) {
+        resultShowInput = resultShowInput
+    }
+
+    textArea.value += resultShowInput
+}
+
