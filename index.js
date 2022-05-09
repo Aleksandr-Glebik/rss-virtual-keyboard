@@ -178,4 +178,30 @@ function getTranslate(lng) {
             el.textContent = keyCodeObj[lng][el.dataset.keycode]
         }
     })
+    // console.log('lang', lang);
+    setLocalStorage(lang)
 }
+
+function setLocalStorage() {
+    localStorage.setItem('lang', lang)
+}
+
+window.addEventListener('beforeunload', setLocalStorage)
+
+function getLocalStorage() {
+    if (localStorage.getItem('lang')) {
+        lang = localStorage.getItem('lang')
+        getTranslateWithLC(lang)
+    }
+}
+
+function getTranslateWithLC(lang) {
+    arrKeys.forEach((el) => {
+        if (Object.keys(keyCodeObj[lang]).includes(el.dataset.keycode)) {
+            el.textContent = ''
+            el.textContent = keyCodeObj[lang][el.dataset.keycode]
+        }
+    })
+}
+
+window.addEventListener('load', getLocalStorage)
